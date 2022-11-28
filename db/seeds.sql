@@ -20,7 +20,7 @@ VALUES(
 INSERT INTO employee (first_name, last_name)
 VALUES (
         ("Bruce", "Wayne"),
-        ("Peter", "Parker")
+        ("Peter", "Parker"),
         ("Tony", "Stark"),
         ("Bruce", "Banner"),
         ("Selina", "Kyle"),
