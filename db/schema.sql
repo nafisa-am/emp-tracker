@@ -5,7 +5,7 @@ USE tracker_db;
 
 CREATE TABLE department (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  department_name VARCHAR(30) NOT NULL
+  name VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE role (
@@ -14,9 +14,10 @@ CREATE TABLE role (
     salary DECIMAL,
     department_id INT,
     FOREIGN KEY (department_id)
-    REFERENCES departments(id)
-    ON DELETE SET NULL
+    REFERENCES department(id)
+    ON DELETE CASCADE ON UPDATE CASCADE
 );
+
 
 CREATE TABLE employee (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -25,8 +26,10 @@ CREATE TABLE employee (
     role_id INT,
     manager_id INT,
     FOREIGN KEY (role_id)
-    REFERENCES roles(id),
+    REFERENCES role(id),
+    ON DELETE RESTRICT ON UPDATE CASCADE
     FOREIGN KEY (manager_id)
-    REFERENCES employees(id)
+    REFERENCES employee(id)
     ON DELETE SET NULL
-);
+    ON UPDATE CASCADE
+)
