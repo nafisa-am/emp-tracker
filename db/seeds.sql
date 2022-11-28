@@ -1,8 +1,30 @@
 INSERT INTO department (name)
-VALUES ();
+VALUES (
+        ("IT"),
+        ("Customer Service"),
+        ("Retail"),
+        ("Human Resources")
+        );
 
 INSERT INTO role (title, salary, department_id)
-VALUES()
+VALUES(
+        ("Manager", 35000),
+        ("Data Analyst", 30000),
+        ("HR Officer", 25000),
+        ("Customer Service Assistant", 20000),
+        ("Retail Assitant", 20000),
+        ("Intern", 18000)
+
+    )
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ()
+VALUES (
+        ("Bruce", "Wayne"),
+        ("Peter", "Parker")
+        ("Tony", "Stark"),
+        ("Bruce", "Banner"),
+        ("Selina", "Kyle"),
+        ("Ororo", "Munroe"),
+        ("Natasha", "Romanoff")
+
+)
