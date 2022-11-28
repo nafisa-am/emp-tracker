@@ -13,9 +13,9 @@ VALUES
         ("Manager", 35000, 1),
         ("Data Analyst", 30000, 3),
         ("HR Officer", 25000, 4),
-        ("Customer Service Assistant", 20000, 6),
-        ("Retail Assitant", 20000, 5),
-        ("Intern", 18000, 8);
+        ("Customer Service Assistant", 20000, 2),
+        ("Retail Assitant", 20000, 4),
+        ("Intern", 18000, 1);
 
 SELECT * FROM role;
 

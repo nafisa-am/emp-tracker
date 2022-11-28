@@ -1,5 +1,5 @@
 const mysql = require('mysql2');
-const inquirer = require("inquirer");
+const inquirer = require('inquirer');
 const table = require("console.table");
 const express = require ("express");
 
@@ -22,7 +22,7 @@ const connection = mysql.createConnection(
     password: '',
     database: 'tracker_db'
   },
-  console.log(`Connected to the movies_db database.`)
+  console.log(`Connected to the tracker_db database.`)
 );
 
 // connection.connect(err => {
@@ -34,6 +34,8 @@ const connection = mysql.createConnection(
 //   console.log("Welcome to this tacker!");
 //   run();
 // });
+
+run ();
 
 function run() {
   inquirer
