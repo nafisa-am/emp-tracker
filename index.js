@@ -15,12 +15,12 @@ app.use(express.json());
 
 const connection = mysql.createConnection(
   {
-    host: 'localhost',
-    // MySQL username,
+    host: '127.0.0.1',
+    // MySQL username
     user: 'root',
     // TODO: Add MySQL password here
     password: '',
-    database: 'tracker_db'
+    database: 'tracker_db',
   },
   console.log(`Connected to the tracker_db database.`)
 );
