@@ -6,7 +6,7 @@ VALUES (
         ("Human Resources")
         );
 
-INSERT INTO role (title, salary, department_id)
+INSERT INTO role (title, salary)
 VALUES(
         ("Manager", 35000),
         ("Data Analyst", 30000),
@@ -17,7 +17,7 @@ VALUES(
 
     )
 
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
+INSERT INTO employee (first_name, last_name)
 VALUES (
         ("Bruce", "Wayne"),
         ("Peter", "Parker")
