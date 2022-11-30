@@ -45,13 +45,13 @@ Steps to follow for installation:
 
 
 
-### Screenshot
+### Screenshots
+
 
 
 ### Links 
 
-The following video shows an example of the application being used from the command line:
-
+The following video shows an example of the application being used from the command line: https://drive.google.com/file/d/1vJuzhOC1vIXXJNpzMxpy5tvAeFMwBshd/view.
 
 GitHub repo - https://github.com/nafisa-am/emp-tracker
 

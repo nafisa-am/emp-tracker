@@ -53,35 +53,35 @@ function run() {
 
     .then(function(answer) {
       switch (answer.action) {
-      case "View all employees":
+      case "View All Employees":
         viewEmployee();
         break;
       
-      case "View all departments":
+      case "View All Departments":
         viewDepartment();
         break;
     
-      case "View all roles":
+      case "View All Roles":
         viewRole();
         break;
 
-      case "Add employee":
+      case "Add Employee":
         addEmployee();
         break;
 
-      case "Add department":
+      case "Add Department":
         addDepartment();
         break;
 
-      case "Add roles":
+      case "Add Roles":
         addRole();
         break;
 
-      case "Update employee role":
+      case "Update Employee Role":
         updateRole();
         break;
 
-      case "Remove employee":
+      case "Remove Employee":
         removeEmployee();
         break;
 
@@ -118,13 +118,13 @@ function viewRole() {
   });
 }
 
-// function viewManager() {
-//   connection.query("SELECT * FROM role", function (err, res) {
-//     if (err) throw err;
-//     console.table(res);
-//     run();
-//   });
-// }
+function viewManager() {
+  connection.query("SELECT * FROM role", function (err, res) {
+    if (err) throw err;
+    console.table(res);
+    run();
+  });
+}
 
 
 /* -------------------------------- Adds user data into into corresponding functions  -------------------------------- */
