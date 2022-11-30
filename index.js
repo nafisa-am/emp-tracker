@@ -1,41 +1,34 @@
+
 const mysql = require('mysql2');
 const inquirer = require('inquirer');
-const table = require("console.table");
 const express = require ("express");
+const { printTable } = require('console-table-printer');
 
-// import mysql from 'mysql2'; 
-// import inquirer from 'inquirer';
-// import table from 'console.table';
-// import express from 'express';
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+// Express middleware
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+
 const connection = mysql.createConnection(
   {
-    host: 'localhost',
+    host: '127.0.0.1',
     // MySQL username,
     user: 'root',
-    // TODO: Add MySQL password here
+    // Add MySQL password here
     password: '',
     database: 'tracker_db'
   },
   console.log(`Connected to the tracker_db database.`)
 );
 
-// connection.connect(err => {
-//   if (err) {
-//     console.error("error connecting: " + err.stack);
-//     return;
-//   }
-//   console.log("connected as id " + connection.threadId);
-//   console.log("Welcome to this tacker!");
-//   run();
-// });
 
 run ();
+
+// Inquirer allows question selection
 
 function run() {
   inquirer
@@ -44,17 +37,20 @@ function run() {
       type: "list",
       message: "What would you like to do?",
       choices: [
-        "View all employees",
-        "View all departments",
-        "View all roles",
-        "Add employee",
-        "Add department",
-        "Add roles",
-        "Update employee role",
-        "Remove employee",
+        "View All Employees",
+        "View All Departments",
+        "View All Roles",
+        "Add Employee",
+        "Add Department",
+        "Add Roles",
+        "Update Employee Role",
+        "Remove Employee",
         "Exit"
       ]
     })
+
+    // Switch cases depending on user selection
+
     .then(function(answer) {
       switch (answer.action) {
       case "View all employees":
@@ -96,6 +92,8 @@ function run() {
     });
 }
 
+// Function to view choices on user selection
+
 function viewEmployee() {
   connection.query("SELECT * FROM employee", function (err, res) {
     if (err) throw err;
@@ -120,13 +118,17 @@ function viewRole() {
   });
 }
 
-function viewMan() {
-  connection.query("SELECT * FROM role", function (err, res) {
-    if (err) throw err;
-    console.table(res);
-    run();
-  });
-}
+// function viewManager() {
+//   connection.query("SELECT * FROM role", function (err, res) {
+//     if (err) throw err;
+//     console.table(res);
+//     run();
+//   });
+// }
+
+
+/* -------------------------------- Adds user data into into corresponding functions  -------------------------------- */
+
 
 function addEmployee() {
   inquirer
@@ -257,6 +259,9 @@ function addRole() {
       );
   });
 };
+/* ---------------------------------------------------------------------------------------------------- */
+
+// Function to remove employee from list 
 
 function removeEmployee() {
   inquirer
@@ -277,6 +282,7 @@ function removeEmployee() {
     })
 }
 
+// function to update role on list 
 
  updateRole = () => {
   connection.query("SELECT * FROM employee", function (err, res) {
@@ -314,6 +320,8 @@ function removeEmployee() {
     });
   })
 };
+
+// Function to exit and stop connection 
 
 function exit() {
   console.log("Thank you for using Emplyee Tracker!");
