@@ -18,7 +18,7 @@ Employee Tracker application using Node.js, Inquirer, and MySQL.
 
 For this assignment I was tasked with creating a command-line application from scratch as there is not starter code. This is an interface that allow non-developers to easily view and interact with the information stored in the databases. These interfaces are called **content management systems (CMS)**. 
 
-this assignments is created to manage a company's employee database using Node.js, Inquirer and MySQL.
+This assignments is created to manage a company's employee database using Node.js, Inquirer and MySQL.
 As this is not a deployed project, I have created a walk-through video that demonstrates its functionality which can be found in the links section below. 
 
 
@@ -47,6 +47,11 @@ Steps to follow for installation:
 
 ### Screenshots
 
+ 
+ 
+<img width="1440" alt="Screenshot 2022-11-30 at 00 54 52" src="https://user-images.githubusercontent.com/108237958/204681976-5fbaaaca-cccb-4ac9-bcbf-d7d6c3d48f7c.png">
+
+<img width="1440" alt="Screenshot 2022-11-30 at 00 54 38" src="https://user-images.githubusercontent.com/108237958/204681989-da21f481-4713-4419-af3d-15dd1920d4c6.png">
 
 
 ### Links 
